@@ -27,7 +27,7 @@ To set up Moodle using Docker, please follow these steps:
     docker run -d --name moodle -p 8080:8080 -p 8443:8443 --env ALLOW_EMPTY_PASSWORD=yes --env MOODLE_DATABASE_USER=bn_moodle --env MOODLE_DATABASE_PASSWORD=bitnami --env MOODLE_DATABASE_NAME=bitnami_moodle --network moodle-network --volume moodle_data:/bitnami/moodle --volume moodledata_data:/bitnami/moodledata bitnami/moodle:latest
     ```
 
-3. After successfully running the above commands, you can access your Moodle instance at `http://localhost:8080` or `https://localhost:8443`.
+3. After successfully running the above commands, you can access your Moodle instance at `http://localhost:8080` or `https://localhost:8443`. Please note that it may take 3-5 minutes for the application to be fully operational.
 
 **Admin User:**
 - Username: `user`
