@@ -1,0 +1,194 @@
+<div
+  style="background-color: #f0f8ff; padding: 10px; border-left: 4px solid #3498db; margin-bottom: 20px;">
+  Dieser Leitfaden erklärt, wie SaaS-Anwendungen sicher konfiguriert und genutzt
+  werden können, basierend auf den NCSC-Sicherheitsprinzipien. Er konzentriert
+  sich auf Sicherheitsmaßnahmen zur Gewährleistung der Betriebskontinuität und
+  zur Minimierung potenzieller Risiken.</div>
+<ul>
+  <li><strong style="color: #3498db;">MFA
+      (Multi-Faktor-Authentifizierung):</strong> Ein
+    Authentifizierungsverfahren, das zwei oder mehr unabhängige Faktoren zur
+    Verifizierung der Identität eines Benutzers verwendet.</li>
+  <li><strong style="color: #3498db;">SSO (Single Sign-On):</strong> Ein
+    Authentifizierungsverfahren, bei dem ein Benutzer sich einmal anmeldet und
+    dann auf mehrere Anwendungen zugreifen kann, ohne sich erneut anmelden zu
+    müssen.</li>
+  <li><strong style="color: #3498db;">RBAC (Rollenbasierte
+      Zugriffskontrolle):</strong> Ein Sicherheitskonzept, das den Zugriff auf
+    Systeme und Daten basierend auf der Rolle des Benutzers innerhalb der
+    Organisation regelt.</li>
+  <li><strong style="color: #3498db;">PAM (Privileged Access
+      Management):</strong> Systeme und Prozesse, die den Zugriff von
+    Administratoren und anderen privilegierten Benutzern auf kritische Systeme
+    und Daten überwachen und steuern.</li>
+  <li><strong style="color: #3498db;">PAW (Privileged Access
+      Workstation):</strong> Speziell gesicherte Arbeitsstationen, die für
+    administrative Aufgaben verwendet werden und durch technische Maßnahmen
+    geschützt sind.</li>
+  <li><strong style="color: #3498db;">Zero-Trust-Architektur:</strong> Ein
+    Sicherheitsmodell, das davon ausgeht, dass keine Benutzer oder Geräte
+    innerhalb oder außerhalb des Netzwerks vertrauenswürdig sind und alle
+    Anfragen überprüft werden müssen.</li>
+</ul>
+<h2>Verständnis der Anwendung und ihres Zwecks</h2>
+<hr>
+<p>Bevor überhaupt mit der Konfiguration der ausgewählten SaaS-Anwendungen
+  begonnen wird, ist es notwendig, zuerst den Zweck und die Anwendung zu
+  verstehen, um fundierte Entscheidungen treffen zu können. Dieser Schritt dient
+  als Grundlage für weitere Entscheidungen, die sowohl die Benutzer- als auch
+  die Sicherheitsanforderungen betreffen.</p>
+<p>Um zu identifizieren, welche Art von Daten im Service verarbeitet werden und
+  welche regulatorischen Anforderungen bestehen, sollten Entscheidungsträger die
+  Hilfsmittel und Dokumentationen des SaaS-Anbieters heranziehen. Diese
+  Dokumentationen beinhalten Best Practices, die von großem Nutzen für die
+  Konfiguration und Nutzung der Anwendung sind.</p>
+<p>Für das Testen der gewählten Konfigurationen bieten viele Anbieter eigene
+  Testumgebungen an. Dies bietet den Vorteil, dass hiermit ein tiefes
+  Verständnis für eine Vielzahl von Konfigurationen geschaffen wird,
+  insbesondere für die zuständigen Administratoren. Ein weiterer Vorteil bei der
+  Nutzung von Testumgebungen ist, dass hier viel experimentiert werden kann,
+  ohne die tatsächliche Produktionsumgebung zu beeinträchtigen.</p>
+<h2>Gestaltung des Benutzer-Lebenszyklusmanagements</h2>
+<hr>
+<p>Der nächste Schritt umfasst das Benutzer-Lebenszyklusmanagement.
+  Entscheidungsträger müssen hierbei besonders auf das Benutzer-Onboarding und
+  -Offboarding für SaaS-Anwendungen achten. Zugriffsrechte müssen rechtzeitig
+  für neue Mitarbeiter vergeben und so schnell wie möglich für ausscheidende
+  Mitarbeiter entzogen werden. Des Weiteren sollte der Zugang für Benutzer auf
+  das Minimum beschränkt sein.</p>
+<p>Benutzer können sowohl interne Mitarbeiterteams als auch externe
+  Kollaborationspartner sein. Es ist wichtig zu identifizieren, welche
+  Identitäten Zugriff auf das System benötigen, um den Betrieb
+  aufrechtzuerhalten und eine passende Zugriffskontrolle zu implementieren.</p>
+<p>Ein zentrales Identitätssystem wird bevorzugt, um Konsistenz und einen guten
+  Überblick zu gewährleisten. Ein weiterer wichtiger Aspekt, der betrachtet
+  werden sollte, ist, wie leicht bestehende Benutzer im System neue Benutzer
+  registrieren können. Die Benutzerfreundlichkeit spielt hierbei eine große
+  Rolle, denn wenn diese nicht gegeben ist, könnten Benutzer dazu verleitet
+  werden, Sicherheitsvorkehrungen zu umgehen oder eigene Lösungen zum Hinzufügen
+  und Entfernen von Nutzern zu verwenden.</p>
+<h2>Robuste Nutzerauthentifizierung</h2>
+<hr>
+<p>Als Nächstes müssen sich Entscheidungsträger Gedanken über
+  Authentifizierungsmethoden machen. Empfohlen wird hierbei die Nutzung moderner
+  Methoden wie Single Sign-On (SSO) und Multi-Faktor-Authentifizierung (MFA).
+  Dabei ist es wichtig, dass die zu überprüfenden Benutzeridentitäten eindeutige
+  Attribute aufweisen, die dabei helfen, eine robuste Zugriffskontrolle
+  durchzusetzen. Dadurch können auch Spoofing- und Manipulationsangriffe
+  verhindert werden.</p>
+<p>SSO sollte aus diesem Grund verwendet werden, da es die Verwaltung von
+  Benutzeridentitäten vereinfacht und die Benutzer sich nur ein Anmeldeset
+  merken müssen. Falls SSO nicht umgesetzt werden kann, sollte auf eine direkte
+  Authentifizierung zurückgegriffen und diese mit MFA und einer aktuellen
+  Passwortpolitik abgesichert werden.</p>
+<h2>Absicherung administrativer Zugänge</h2>
+<hr>
+<p>Der nächste Aspekt, der bei der sicheren Nutzung einer SaaS-Anwendung
+  beachtet werden muss, ist die Verwaltung administrativer Benutzer. Diese
+  Benutzer besitzen Privilegien, um Konfigurationen des Services zu verändern
+  und auf die Ressourcen von Benutzern zuzugreifen. Um einen möglichen
+  Missbrauch von System- oder Benutzerdaten zu vermeiden, muss eine strikte
+  Verwaltung dieser Privilegien erfolgen.</p>
+<p>Es ist wichtig, die Anzahl der administrativen Benutzer zu minimieren und das
+  Prinzip der minimalen Rechtevergabe anzuwenden, um den Schaden im Falle eines
+  kompromittierten Administrationskontos zu reduzieren. Dies sollte durch eine
+  rollenbasierte Zugriffskontrolle (RBAC) umgesetzt werden. Jeder administrative
+  Zugriff muss protokolliert und überwacht werden, um schnell auf
+  Sicherheitsvorfälle reagieren zu können.</p>
+<p>Für besonders sensible Daten sollte Privileged Access Management (PAM)
+  verwendet werden, um ständige Administratorrechte zu entfernen. Administrative
+  Tätigkeiten sollten nur auf vertrauenswürdigen Geräten, wie einer Privileged
+  Access Workstation (PAW), durchgeführt werden.</p>
+<h2>Berechtigungsmanagement für Standardnutzer</h2>
+<hr>
+<p>Bei der Vergabe von Privilegien für externe Partner und interne Mitarbeiter
+  ist es entscheidend, nur so viel Handlungsspielraum im System zu gewähren, wie
+  der Nutzer tatsächlich benötigt, um seine Aufgaben zu erfüllen. Dies minimiert
+  potenzielle Sicherheitsrisiken und schützt sensible Daten. Die
+  Zugriffskontrolle sollte rollenbasiert erfolgen, um eine klare und
+  strukturierte Verwaltung der Berechtigungen zu gewährleisten.</p>
+<p>Ein Zero-Trust-Modell ist besonders empfehlenswert, da hierbei nicht nur die
+  Identität des Nutzers, sondern auch der Kontext des Zugriffs berücksichtigt
+  wird. Dies bedeutet, dass der Zugriff auf hochsensible Ressourcen nur von
+  vertrauenswürdigen Geräten und Netzwerken aus erfolgen darf. Durch die
+  Implementierung dieser Ansätze wird sichergestellt, dass der Zugang zu
+  Systemen und Daten auf das notwendige Minimum beschränkt bleibt und
+  Sicherheitsverletzungen effektiv verhindert werden können.</p>
+<h2>Nutzung vertrauenswürdiger Geräte</h2>
+<hr>
+<p>Beim Zugriff auf den Service müssen die verwendeten Geräte genauestens
+  untersucht werden. Es sollte sichergestellt sein, dass der Zugriff nur von
+  vertrauenswürdigen Geräten erfolgt, wie zum Beispiel Firmenlaptops. Es sollte
+  nicht möglich sein, mit privaten Computern internen Zugriff zu bekommen. Beim
+  Zugriff auf hochsensible Daten sollten nur gesicherte Geräte verwendet werden,
+  die sich am Firmengelände befinden, um eine Kompromittierung zu verhindern.
+  Hierbei sollte das Zero-Trust-Modell miteinbezogen werden, da es hilfreich
+  ist, die Gerätesicherheit zu erreichen.</p>
+<h2>Datenschutz und Datensicherheit gewährleisten</h2>
+<hr>
+<p>Die Daten sollten gemäß den Best Practices verschlüsselt, sowohl in Transit
+  als auch in Ruhe, und nur in konformen Rechtsräumen gespeichert und
+  verarbeitet werden die mit den gesetzlichen Anforderungen der Kunden vereinbar
+  sind. Wie im Prinzip 1 und 2 bereits beschrieben. Es sollte nicht willkürlich
+  möglich sein auf die Daten durch das Personal des Anbieters zuzugreifen.
+  Hierbei muss im Falle eine Einwilligung von Kunden eingeholt werden.</p>
+<h2>Prüfung auf Schadsoftware und gefährliche Inhalte</h2>
+<hr>
+<p>SaaS-Anwendungen können von Angreifern verwendet werden, um bösartige Inhalte
+  an Kunden zu verbreiten. Der Cloud-Anbieter sollte Sicherheitsmechanismen
+  implementiert haben, die sowohl empfangene Daten als auch bereits gespeicherte
+  Daten auf bösartige Komponenten untersuchen. Die dabei angewendeten Kontrollen
+  sollten auf die gängigsten Bedrohungen abgestimmt sein, wie zum Beispiel das
+  Prüfen von hochgeladenen Dateien auf Malware und URLs in Nachrichten auf
+  Phishing-Versuche. Die Erkennung und Behebung von Bedrohungen sollte in die
+  vom Kunden vorgenommenen Sicherheitsüberwachungs- und
+  Vorfallsreaktionsprozesse integriert sein.</p>
+<h2>Sichere Freigabe und Nutzung von Ressourcen</h2>
+<hr>
+<p>Entscheidungsträger müssen sicherstellen, dass der Zugang zu Ressourcen
+  sicher geteilt wird, um unbeabsichtigte und beabsichtigte Datenfreigaben zu
+  vermeiden. Es sollte standardmäßig nicht möglich sein, auf Daten ohne
+  eingeholte Einwilligung zuzugreifen. Die anfallenden Ressourcen sollten
+  eindeutige Kennzeichnungen besitzen, die sofort ersichtlich zeigen, wie
+  sensibel diese Daten eingestuft sind. Es sollten Schulungen und Leitfäden
+  entwickelt werden, die die richtige Verwaltung und Nutzung von Ressourcen
+  fördern. Ebenfalls sollten Tools verwendet werden, die es vereinfachen, den
+  Überblick über geteilte Ressourcen zu behalten und verhindern, dass Ressourcen
+  nach eigenem Ermessen geteilt werden.</p>
+<h2>Management von Dienstidentitäten</h2>
+<hr>
+<p>Dienstidentitäten sollten effektiv und sicher verwaltet werden, um das Risiko
+  von Missbrauch zu vermeiden. Es sollte eine kontinuierliche Überwachung
+  hinsichtlich der Nutzungshistorie und der vorhandenen Berechtigungen der
+  Dienstidentität erfolgen. Hochrisiko-Zugänge sollten eine administrative
+  Genehmigung erfordern. Dabei ist es wichtig, regelmäßig den Umfang des
+  Zugriffs zu prüfen, um sicherzustellen, dass dieser für die auszuführenden
+  Arbeiten notwendig ist. Zudem sollten die Aktivitäten dieser Dienste in die
+  Sicherheitsüberwachungs- und Auditierungsprozesse integriert werden, um
+  böswillige Nutzung zu erkennen.</p>
+<h2>Reaktionsstrategien für Sicherheitsvorfälle und Notfälle</h2>
+<hr>
+<p>Reaktionsstrategien sind wichtig für ein schnelles Agieren bei
+  Sicherheitsvorfällen und eine schnelle Erholung von dabei erlittenen Schäden.
+  Entscheidungsträger müssen sicherstellen, dass hierfür gut definierte und
+  getestete Prozesse vorliegen, die sowohl die eigene Nutzung als auch den
+  gesamten Dienst betreffen. Es ist wichtig zu wissen, wie
+  Sicherheitsbenachrichtigungen geliefert werden und wie man den Anbieter im
+  Falle eines Vorfalls benachrichtigt. Die verwendeten Kontaktinformationen
+  müssen aktuell und gültig sein. Die Reaktionsprozesse sollten alle Vorfälle
+  abdecken und kritische Daten sichern. Robuste Verfahren zur
+  Zugriffswiederherstellung sollten eingerichtet werden, um im Katastrophenfall
+  den Zugang schnell wiederherzustellen.</p>
+<h2>Überwachung von Sicherheitsereignissen</h2>
+<hr>
+<p>Die kontinuierliche Überwachung und die Analyse von Audit-Daten sind
+  notwendig, um Sicherheitsvorfälle frühzeitig zu erkennen.
+  Aktivitätenprotokolle sollten manipulationssicher gespeichert und lange genug
+  aufbewahrt werden, um forensische Analysen zu ermöglichen.</p>
+<h2>Aufrechterhaltung der Sicherheitsstandards</h2>
+<hr>
+<p>Die kontinuierliche Anpassung an technologische Entwicklungen und
+  Sicherheitsupdates ist erforderlich, um die Schutzmaßnahmen aktuell zu halten.
+  Die regelmäßige Überprüfung der Sicherheitsstrategien und -konfigurationen
+  gewährleistet, dass Anwendungen den Sicherheitsanforderungen weiterhin
+  entsprechen.</p>

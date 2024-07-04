@@ -1,0 +1,499 @@
+<!-- Fügen Sie diesen Inhalt im Textfeld ein. Zuvor müssen Sie aber bei Tools auf "Source Code" wechseln. -->
+
+<div
+  style="background-color: #f0f8ff; padding: 10px; border-left: 4px solid #3498db; margin-bottom: 20px;">
+  Die Auswahl eines Cloud-Anbieters ist entscheidend für die Sicherheit und
+  Effizienz von Datenverarbeitungssystemen. Dieses Kapitel erörtert die
+  Methodiken des National Cyber Security Centre (NCSC) zur Bewertung von
+  Cloud-Diensten, um sicherzustellen, dass Anbieter verantwortungsvoll mit
+  sensiblen Daten umgehen. Der prinzipienbasierte Ansatz des NCSC hilft, die
+  Eignung eines Cloud-Dienstes hinsichtlich der Sicherheitsanforderungen zu
+  bewerten. Der prinzipienbasierte Ansatz des NCSC umfasst 14
+  Sicherheitsprinzipien, die eine umfassende Beurteilung der Konzeption,
+  Implementierung und des Betriebs eines Cloud-Dienstes ermöglichen. Diese
+  Prinzipien sind insbesondere für größere Organisationen relevant, können
+  jedoch von jedem, der mit sensiblen Datentypen arbeitet, angewandt werden.
+</div>
+<h2>Prinzip 1: Schutz von Daten während der Übertragung</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 1)</sup></h3>
+<p>Das erste Prinzip beschreibt die Notwendigkeit, Benutzerdaten, die über
+  Netzwerke versendet werden, gegen Abhörung und Manipulation zu schützen. Dies
+  ist von grundlegender Bedeutung, da Daten während der Übertragung eine große
+  Angriffsfläche bieten, besonders wenn sie über unsichere oder öffentliche
+  Netzwerke gesendet werden.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 1)</sup></h3>
+<p>Dieses Prinzip verfolgt folgende Ziele:</p>
+<ul>
+  <li><strong>die Gewährleistung, dass Daten zwischen dem Endgerät des Benutzers
+      und dem Dienst sicher übertragen werden,</strong></li>
+  <li><strong>die Sicherstellung, dass Datenübertragungen zwischen den internen
+      Komponenten des Dienstes geschützt sind,</strong></li>
+  <li><strong>und dass die Kommunikation mit externen APIs ebenfalls überwacht
+      und sicher ist.</strong></li>
+</ul>
+<h3>Implementierungsansätze <sup>(Prinzip 1)</sup></h3>
+<p><i style="color: #3498db;">Verschlüsselung:</i> Für die Verschlüsselung
+  müssen moderne und bewährte Algorithmen und Protokolle verwendet werden, wie
+  TLS (Transport Layer Security) und IPSec. Ziel ist es, sowohl einen Schutz
+  zwischen Endgeräten und dem ausgewählten Dienst zu gewährleisten als auch die
+  interne Kommunikation zwischen Komponenten zu schützen.</p>
+<p><i style="color: #3498db;">Netzwerkschutz:</i> Netzwerkschutz schützt Daten
+  durch Maßnahmen, die verhindern, dass Angreifer Daten auf dem Übertragungsweg
+  abfangen können. Dazu gehören die Nutzung von sicheren Netzwerkverbindungen,
+  erreicht durch die Verwendung einer VPN, und die Überwachung des
+  Netzwerkverkehrs auf Anomalien.</p>
+<p><i style="color: #3498db;">Authentifizierung:</i> Bei der Authentifizierung
+  von Identitäten sind Technologien wie TLS-Zertifikate und VPNs zu bevorzugen.
+  Cloud-Anbieter müssen ihre Sicherheitsmaßnahmen durch unabhängige
+  Zertifizierungen wie die CSA STAR, SOC2 und ISO 27017:2015 nachweisen können,
+  da diese eine zusätzliche Versicherung bieten, dass die implementierten
+  Sicherheitsmaßnahmen eines Cloud-Anbieters angemessen und fortlaufend geprüft
+  werden, um somit die Sicherheit und Integrität von Kundendaten zu
+  gewährleisten.</p>
+<p>Beim Übertragen großer Datenmengen, insbesondere persönlicher Daten, sollten
+  Organisationen auch Leitlinien zum Schutz großer Datenmengen beachten. Wenn
+  Datenträger zur Datenübertragung verwendet werden, sollten diese gemäß dem
+  Prinzip 2 zum Schutz von Daten in Ruhe gesichert sein.</p>
+<h2>Prinzip 2: Schutz und Resilienz von Vermögenswerten</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 2)</sup></h3>
+<p>Das zweite Prinzip beschreibt die Wichtigkeit, sowohl physische als auch
+  digitale Assets, die im Zusammenhang mit der Speicherung und Verarbeitung von
+  Daten genutzt werden, ausreichend zu schützen. Dies schließt vor allem
+  Anmeldeinformationen, Konfigurationsdateien, Metadaten und Protokolle mit ein,
+  da diese in den meisten Fällen gerne übersehen werden.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 2)</sup></h3>
+<p>Die wichtigsten Aspekte, die dieses Prinzip behandelt, sind der physische
+  Standort und die rechtliche Zuständigkeit, Sicherheitsmaßnahmen in den
+  Rechenzentren und die Datenverschlüsselung.</p>
+<p><i style="color: #3498db;">Physischer Standort und rechtliche
+    Zuständigkeit:</i> Beim physischen Standort sollten Entscheidungsträger
+  darauf achten, wo die Daten der Organisation gespeichert werden und wer
+  direkten Zugriff darauf hat. Maßnahmen, die hier angestrebt werden, umfassen
+  die Aufforderung an den Cloud-Anbieter, eine Liste der Länder vorzulegen, die
+  genau dokumentiert, wo die Daten gespeichert und verarbeitet werden. Es muss
+  sichergestellt werden, welche rechtlichen Bestimmungen in den jeweiligen
+  Ländern gelten, damit die Rahmenbedingungen des Landes, in dem sich die Daten
+  befinden, auch mit den Sicherheits- und Datenschutzanforderungen der
+  Organisation vereinbar sind. Ebenfalls muss überprüft werden, welche Rechte
+  der Dienstanbieter bezüglich der Daten hat und unter welchen Umständen die
+  Daten ohne Zustimmung zugänglich gemacht werden können.</p>
+<p><i style="color: #3498db;">Sicherheitsmaßnahmen im Rechenzentrum:</i> Bei den
+  Sicherheitsmaßnahmen im Rechenzentrum muss gewährleistet sein, dass der Zugang
+  von unautorisierten Personen strengstens untersagt ist, um mögliche
+  Manipulation, Diebstahl oder auch eine Neukonfiguration von Systemen zu
+  verhindern. Diese Informationen müssen vom Dienstanbieter offengelegt werden
+  und bestenfalls durch Zertifizierungen, z.B. CSA CCM v3.0.1, ISAE 3402,
+  abgesichert sein. Entscheidungsträger sollten Dienstanbieter bevorzugen, die
+  diese genannten Punkte umgesetzt haben.</p>
+<p><i style="color: #3498db;">Datenverschlüsselung:</i> Bei der
+  Datenverschlüsselung handelt es sich bei diesem Prinzip um den Schutz der
+  Daten im Ruhezustand. Dies ist vor allem in Fällen wichtig, in denen sich
+  Angreifer physischen Zugriff zur Infrastruktur verschaffen. Der Cloud-Anbieter
+  sollte standardmäßig alle Benutzerdaten im Ruhezustand verschlüsseln. Als
+  Technologie sollten hier Algorithmen wie AES-GCM und AES-XTS verwendet werden.
+</p>
+<h2>Prinzip 3: Trennung zwischen den Benutzern</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 3)</sup></h3>
+<p>Das dritte Prinzip konzentriert sich auf Trennungstechniken, die
+  implementiert werden müssen, um den Zugriff und Missbrauch von Daten durch
+  verschiedene Nutzer innerhalb eines Cloud-Dienstes zu verhindern. Ein
+  ausgewählter Cloud-Anbieter muss nachweisen, wie die Trennungen in den
+  Bereichen Rechenressourcen (wie Containerisierung und IaaS), Speicher,
+  Datenflüsse und Netzwerke umgesetzt sind. Diese Sicherheitsgrenzen sorgen
+  dafür, dass der Zugriff auf die Daten kontrolliert erfolgt und der Dienst
+  gegen internen bösartigen Code abgesichert ist.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 3)</sup></h3>
+<p>Es ist wichtig zu betonen, dass wenn ein Anbieter SaaS- oder PaaS-Dienste
+  verwendet, die auf anderen PaaS- oder IaaS-Diensten basieren, der Anbieter
+  erläutern sollte, welche Trennungstechniken von den zugrundeliegenden
+  Komponenten und der Infrastruktur geerbt werden. Die Granularität der
+  Trennungstechniken hängt vom Cloud-Modell ab. Bei PaaS, wo Kunden
+  benutzerdefinierten Code entwickeln und ausführen können, muss eine stärkere
+  Separation vorhanden sein als bei einem SaaS-Modell. Entscheidungsträger
+  sollten unbedingt nach externen Nachweisen wie Penetrationstests und
+  Sicherheitsüberprüfungen Ausschau halten, um zu verstehen, ob die
+  implementierten Sicherheitsgrenzen ausreichend für die Anforderungen sind.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 3)</sup></h3>
+<p>Bei der Rechenressourcen-Trennung sollte genau überlegt werden, welche
+  Technologien zur Trennung verwendet werden. Hierbei sollte ein Anbieter
+  gewählt werden, der eine hardwaregestützte Trennung anstrebt, bevorzugt durch
+  Virtualisierung mit Hypervisor. Bei der Speichertrennung muss zuerst
+  verstanden werden, wie genau auf die Daten zugegriffen wird und welche
+  Technologien im Hintergrund eingesetzt werden, um den Zugriff zu verweigern.
+  Standardmäßig muss der Zugriff auf Daten verweigert sein. Es soll nur mittels
+  rollenbasierter Zugriffskontrollen jenen Zugriff gewährt werden, die dafür
+  autorisiert sind. Zuletzt muss die Netzwerktrennung betrachtet werden. Hierbei
+  sollten Anbieter gewählt werden, die SDN (softwaredefinierte Netzwerke)
+  implementiert haben. Bei SDN ist darauf zu achten, dass an beiden Enden des
+  Datenverkehrs Zugriffskontrollen existieren.</p>
+<h2>Prinzip 4: Governance und Betriebsmanagement</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 4)</sup></h3>
+<p>Das Prinzip 4 beschreibt die Einbindung eines Governance-Rahmenwerks, um ein
+  koordiniertes und übersichtliches Management des Cloud-Dienstes zu erreichen.
+  Dieses muss prozedurale, personelle, physische und technische Kontrollen über
+  den gesamten Lebenszyklus des Dienstes umfassen. Cloud-Anbieter müssen
+  sicherstellen, dass die Kontrollen im Laufe des Betriebs ordnungsgemäß
+  funktionieren. Das Rahmenwerk muss auf Änderungen im Dienst, technologische
+  Änderungen und auf das Auftreten neuer Bedrohungen angepasst und evaluiert
+  werden.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 4)</sup></h3>
+<p>Entscheidungsträger müssen sicherstellen, dass der ausgewählte Service ein
+  Governance-Rahmenwerk besitzt und ob dieses für die beabsichtigte Nutzung
+  geeignet ist. Dabei sollten etablierte Governance-Praktiken beachtet werden,
+  wie die Benennung einer verantwortlichen Führungskraft, z.B. dem „Chief
+  Security Officer“, „Chief Information Officer“ oder „Chief Technical Officer“,
+  der direkt für die Sicherheit des Cloud-Services zuständig ist.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 4)</sup></h3>
+<p>Zudem sollte der Cloud-Anbieter ein formal dokumentiertes
+  Sicherheits-Governance- und Risikomanagementsystem vorlegen können, das
+  wesentliche Bereiche der Informationssicherheit abdeckt, die für die Nutzung
+  des Dienstes relevant sind. Wichtig zu beachten sind Verfahren zur
+  Identifikation und Einhaltung gesetzlicher Anforderungen. Es wird empfohlen,
+  auf Standards wie CSA CCM v3.0.1, SOC2 und ISO/IEC 27001 zurückzugreifen.
+  Diese beinhalten Bewertungskriterien, um zu prüfen, wie gut das umgesetzte
+  Governance-Rahmenwerk bestimmte Risiken abdeckt. Zu beachten ist hierbei, dass
+  diese Standards in der Detaillierung und im Umfang variieren. Hier muss darauf
+  geachtet werden, dass diese Standards die oben genannten Ziele eines
+  Governance-Rahmenwerks abdecken.</p>
+<h2>Prinzip 5: Betriebssicherheit</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 5)</sup></h3>
+<p>Das 5. Prinzip betont die Notwendigkeit, dass der Betrieb und die Verwaltung
+  von Cloud Services so zu erfolgen haben, dass potenzielle Angriffe behindert,
+  erkannt oder gar verhindert werden. Eine effektive Betriebssicherheit sollte
+  niemals komplex, bürokratisch oder kostenintensiv sein.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 5)</sup></h3>
+<p>Die wichtigsten Aspekte, auf die Entscheidungsträger bei der
+  Betriebssicherheit achten müssen, sind:</p>
+<ul>
+  <li>Schwachstellenmanagement</li>
+  <li>Schutzüberwachung</li>
+  <li>Vorfallmanagement</li>
+  <li>Konfigurations- und Änderungsmanagement</li>
+</ul>
+<h3>Implementierungsansätze <sup>(Prinzip 5)</sup></h3>
+<p><i style="color: #3498db;">Schwachstellenmanagement:</i> Der Anbieter sollte
+  Prozesse implementiert haben, die es erleichtern, Schwachstellen in allen
+  zuständigen Komponenten des Dienstes zu identifizieren, zu priorisieren und zu
+  mindern. Umgesetzt kann dies durch kontinuierliche Überwachung von
+  Bedrohungen, aber auch durch die Bewertung neuer potenzieller Bedrohungen.
+  Zertifizierungen wie ISO/IEC 30111:2019 und CSA CCM v3.0.1 können die
+  Effektivität dieser Prozesse bestätigen.</p>
+<p><i style="color: #3498db;">Schutzüberwachung:</i> Es sollten Mechanismen
+  vorhanden sein, um Angriffe, Missbrauch und Fehlfunktionen zu überwachen.
+  Dabei sollen sowohl erfolglose als auch erfolgreiche Angriffe erkannt werden.
+  Erreicht wird dies durch eine Kombination aus Datenerfassung und einer
+  darauffolgenden Analyse, unterstützt durch Threat Intelligence. Somit können
+  Kompromittierungen und eine unzulässige Nutzung innerhalb eines Cloud-Dienstes
+  identifiziert werden.</p>
+<p><i style="color: #3498db;">Vorfallmanagement:</i> Dies beinhaltet vorgeplante
+  Prozesse, die eine schnelle und effektive Reaktion auf Sicherheitsvorfälle
+  ermöglichen. Cloud-Anbieter müssen Prozesse vorlegen können, die
+  sicherstellen, dass ein Kunde so schnell wie möglich über einen
+  Sicherheitsvorfall informiert wird. Bei Vorfallmanagementprozessen sind
+  Standards wie ISO/IEC 27035-1:2016 sehr wichtig, und der Anbieter sollte
+  sicherstellen können, dass diese eingehalten werden.</p>
+<p><i style="color: #3498db;">Konfigurations- und Änderungsmanagement:</i>
+  Cloud-Service Anbieter müssen die einzelnen Komponenten und deren
+  Konfigurationen genauestens kennen, um auf Änderungen, die eine mögliche
+  Sicherheitslücke öffnen, schnellstens reagieren zu können. Allgemein sollten
+  alle Änderungen, die den Cloud-Dienst betreffen, auf potenzielle
+  Sicherheitsrisiken bewertet und nachverfolgt werden.</p>
+<h2>Prinzip 6: Personalsicherheit</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 6)</sup></h3>
+<p>Personalsicherheit beschreibt die Überwachung und Überprüfung von Personal
+  des Cloud-Anbieters. Dabei muss der Anbieter Prozesse besitzen, um das
+  Personal, das Zugriff auf Systemdaten und Nutzerdaten hat, einzuschränken. Es
+  müssen technische Kontrollen erfolgen, um Handlungen des Personals zu
+  erfassen. Dadurch soll das Risiko einer unbeabsichtigten oder böswilligen
+  Kompromittierung durch das Servicepersonal verhindert werden.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 6)</sup></h3>
+<p>Dabei sind folgende Aspekte besonders wichtig:</p>
+<p><i style="color: #3498db;">Minimierung des Zugriffs:</i> Entscheidungsträger
+  sollten darauf achten, dass der Zugriff des Personals beim Cloud-Anbieter auf
+  das notwendige Minimum beschränkt ist. Dies verhindert das Auftreten von
+  Datenlecks oder anderen Sicherheitsvorfällen.</p>
+<p><i style="color: #3498db;">Positive Sicherheitskultur:</i> Der Cloud-Anbieter
+  sollte eine positive Sicherheitskultur verfolgen. Es muss geprüft werden, wie
+  dies der Anbieter erreicht. Gute Praktiken sind wiederkehrende
+  Sicherheitsschulungen und angemessene Hintergrundprüfungen der Mitarbeiter.
+  Besonders wichtig sind diese Praktiken für Personen, die hochprivilegierte
+  Rollen im System besitzen.</p>
+<p><i style="color: #3498db;">Technische Kontrollen:</i> Eine Kontrolle zur
+  Überwachung und Einschränkung von Aktionen der Mitarbeiter ist von äußerster
+  Dringlichkeit. Es müssen Protokollierungen erfolgen über Mitarbeiter, die
+  Zugriffe auf Kunden- und Systemdaten durchgeführt haben. Für die Umsetzung
+  dieser technischen Maßnahmen wird eine rollenbasierte Zugriffskontrolle (RBAC)
+  bevorzugt. Hiermit wird sichergestellt, dass Mitarbeiter nur auf das Nötigste
+  Zugriff haben, das ihrer Rolle im System entspricht. Ebenfalls muss der
+  Anbieter ein Meldesystem besitzen, das Kunden umgehend informiert, falls das
+  Personal Aktionen durchführt, die die Daten des Benutzers betreffen. Bei
+  Administratoren, die administrative Fähigkeiten besitzen, müssen diese
+  zeitlich begrenzt werden und streng an Aufgaben oder Datenabfragen gebunden
+  sein.</p>
+<h2>Prinzip 7: Sichere Softwareentwicklung</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 7)</sup></h3>
+<p>Das siebte Prinzip der NCSC-Richtlinien unterstreicht die Bedeutung einer
+  sicheren Gestaltung, Entwicklung und Implementierung von Cloud-Services, um
+  Bedrohungen zu minimieren. Eine unsichere Softwareentwicklung erhöht die
+  Gefahr von bösartigen Aktivitäten, Datenverlust oder einem kompletten
+  Dienstausfall.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 7)</sup></h3>
+<p>Um dies zu verhindern, sollten Entscheidungsträger darauf achten, dass der
+  Anbieter eine sichere Softwareentwicklung verfolgt. Dazu zählen
+  Entwicklungsschulungen, Code-Reviews und die Verwendung von zuverlässigen und
+  sicheren Bibliotheken. Bei der Entwicklung selbst sollte eine
+  Entwicklungspipeline integriert werden, um eine detaillierte Überwachung und
+  Konsistenz der Software zu gewährleisten. Eine klare Trennung in Produktions-,
+  Test- und Entwicklungsumgebungen sollte vorhanden sein, um möglichen
+  Datenverlust auszuschließen, da die Sicherheitsvorkehrungen pro Umgebung
+  unterschiedlich sind. Für die Verwendung externer Bibliotheken muss ein
+  Risikomanagement durch den Anbieter erfolgen, um die Sicherheit und
+  Zuverlässigkeit dieser zu garantieren.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 7)</sup></h3>
+<p>In späteren Entwicklungsphasen sollte ein Plan für die Wartung der Software
+  vorliegen, um auf potenzielle Bedrohungen zu reagieren. Die Implementierung
+  sollte Sicherheitsüberlegungen während des gesamten Designs und der
+  Entwicklung des Services beinhalten. Beispielsweise müssen neue Funktionen auf
+  potenzielle Schwachstellen sofort analysiert und, wenn vorhanden, effektive
+  Maßnahmen ergriffen werden. Sicherheitsstandards wie ISO/IEC 27034, ISO/IEC
+  30111:2019 und CSA CCM v3.0.1, die über Zertifizierungsmöglichkeiten verfügen,
+  können genutzt werden, um Vertrauen in den Softwareentwicklungsprozess des
+  Anbieters zu gewinnen. Wenn der Anbieter auf Drittanbieter-Software
+  zurückgreift, muss eine kontinuierliche Überwachung hinsichtlich Risiken
+  erfolgen und regelmäßige Sicherheitspatches durchgeführt werden.</p>
+<h2>Prinzip 8: Sicherheit der Lieferkette</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 8)</sup></h3>
+<p>Dieses Prinzip betont die Wichtigkeit, dass alle Sicherheitsanforderungen des
+  Cloud-Anbieters auch bei dessen Drittanbieter-Lieferketten vorhanden sein
+  müssen. Die große Gefahr hierbei ist, dass, wenn dies nicht der Fall ist, die
+  Sicherheit des gesamten Services durch den Drittanbieter ausgehebelt werden
+  könnte.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 8)</sup></h3>
+<p>Entscheidungsträger müssen verstehen, wie ihre Daten mit der Lieferkette von
+  Drittanbietern geteilt werden und auch den Prozess dahinter, warum diese die
+  Daten überhaupt benötigen. Bei den übermittelten Daten muss auf die Art
+  geachtet werden, wie Kundendaten oder aber auch abgeleitete Metadaten.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 8)</sup></h3>
+<p>Der Cloud-Anbieter muss daher Sicherheitsanforderungen an seine Lieferkette
+  stellen, damit diese auch von den Drittanbietern implementiert werden. Es muss
+  klar hervorgehen, welche Partei für welche Sicherheitsrisiken verantwortlich
+  ist, um im Falle eines Sicherheitsbruchs schnell reagieren zu können.</p>
+<h2>Prinzip 9: Sicheres Benutzermanagement</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 9)</sup></h3>
+<p>Sicheres Benutzermanagement umfasst die Bereitstellung von Werkzeugen, die
+  Nutzern es einfach erlauben, den Service sicher zu verwalten. Darunter fällt
+  das Verhindern von unzulässigen Zugriffen und Änderungen an System- und
+  Kundendaten. Es muss ein klares Benutzermodell definiert sein, und
+  Entscheidungsträger müssen jegliche Mechanismen, die für die Autorisierung und
+  den darauffolgenden Zugriff auf Daten vom Cloud-Anbieter verwendet werden,
+  verstehen.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 9)</sup></h3>
+<p>Die bereitgestellten Werkzeuge müssen es ermöglichen, dass Kunden
+  Zugriffskontrollen so konfigurieren können, damit sie auf dem Prinzip der
+  geringsten Privilegien basieren. Diese Privilegien umfassen sowohl
+  Administratoren- als auch Standardkonten. Diese Konfigurationen dürfen von
+  anderen Kunden des Services nicht beeinflusst werden, wie bereits im Prinzip 3
+  "Trennung von Benutzern" beschrieben. Die Zugriffskontrolle sollte auf
+  individuellen Berechtigungen basieren, die einer Identität, sei es menschlich
+  oder maschinell, zugeordnet sind. Ebenfalls ist ein einheitliches
+  Zugriffskontrollsystem zu bevorzugen, da hiermit die Verwaltung und das
+  Übersehen von Sicherheitslücken in der Autorisierung deutlich vereinfacht
+  werden.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 9)</sup></h3>
+<p>Bei hoch privilegierten Nutzerrollen muss eine zeitlich begrenzte
+  Berechtigung vorliegen. Somit kann das irrtümliche Vergessen der
+  Rollenentfernung vermieden werden. Entscheidungsträger sollten somit
+  Cloud-Anbieter bevorzugen, die das Verwalten und Überwachen der Zugriffe auf
+  Ressourcen übersichtlicher und einfacher gestalten. Dies betrifft auch das
+  leichte Entfernen von Berechtigungen von Nutzern.</p>
+<h2>Prinzip 10: Identität und Authentifizierung</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 10)</sup></h3>
+<p>Das zehnte Prinzip der NCSC-Richtlinien betont die Notwendigkeit, den Zugang
+  zu Serviceschnittstellen auf authentifizierte und autorisierte Personen zu
+  beschränken. Hierbei sind sowohl Benutzer als auch Dienstidentitäten zu
+  beachten. Entscheidungsträger müssen die Authentifizierung der Schnittstellen
+  des Services kennen, um sicherzugehen, dass der Zugang nur auf zugelassene
+  Identitäten beschränkt ist.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 10)</sup></h3>
+<p>Der Cloud-Anbieter muss hierzu eine moderne Passwortpolitik verfolgen und die
+  gängige Multi-Faktor-Authentifizierung (MFA) einsetzen. Die
+  Authentifizierungsmechanismen müssen auf Prozesse für die Verwaltung neuer,
+  wechselnder und ausscheidender Mitarbeiter angewendet werden. Ebenso müssen
+  Prozesse implementiert sein, um den Lebenszyklus von Anmeldeinformationen zu
+  verwalten. Eine effektive Authentifizierung zeichnet sich durch die
+  Verifizierung einer eindeutigen Identität aus. Jeder Zugriff muss genau zu
+  einer Identität führen.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 10)</sup></h3>
+<p>Für Dienstidentitäten sollten kryptografische Methoden wie Signaturen genutzt
+  werden. Diese Identitäten sollten als kompromittiert gelten und abgelehnt
+  werden, wenn sie von außerhalb der Cloud-Umgebung verwendet werden. Bei den
+  Benutzeranmeldedaten muss ein Zyklus befolgt werden, der unter anderem das
+  Löschen von ausscheidenden Mitarbeitern sowie das schnelle und einfache
+  Entfernen von kompromittierten Anmeldedaten umfasst. Ebenso dürfen
+  Anmeldedaten keine dauerhafte Gültigkeit besitzen. Bei potenziellen Angriffen
+  muss der Cloud-Anbieter sofortige Sicherheitswarnungen für den Kunden
+  bereitstellen.</p>
+<p>Es sollte eine benutzerfreundliche Authentifizierung in Kombination mit einer
+  starken Methodik verwendet werden. Die Implementierung von Single Sign-On
+  (SSO) wird empfohlen, um Identitäten zu einem Unternehmensverzeichnis zu
+  verknüpfen und ein robustes Authentifizierungsmanagement zu ermöglichen.
+  Entscheidungsträger müssen ebenfalls sicherstellen, dass sich der
+  Cloud-Anbieter selbst authentifiziert, um den Zugriff auf den Service gegen
+  gängige Man-in-the-Middle-Angriffe und Imitierungsdienste zu schützen. Dies
+  wird, wie bereits in Prinzip 1 beschrieben, durch Protokolle wie TLS erreicht.
+</p>
+<h2>Prinzip 11: Schutz externer Schnittstellen</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 11)</sup></h3>
+<p>Das elfte Prinzip befasst sich mit der Sicherheit aller internen und externen
+  Schnittstellen des Cloud-Services. Darunter versteht man, Webkonsolen, CLI,
+  Verwaltungsschnittstellen des Cloud-Anbieters und jene Schnittstellen, die zum
+  Kundenservice gehören. Wichtig für Entscheidungsträger ist es hierbei zu
+  verstehen, welche physischen und logischen Schnittstellen vorhanden sind und
+  wie der Zugang gemäß Prinzip 10 mithilfe von Authentifizierung geschützt ist.
+</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 11)</sup></h3>
+<p>Ein Cloud-Anbieter sollte eine Liste vorlegen, die detailliert dokumentiert,
+  welche Schnittstellen oder Dienste dem Internet direkt ausgesetzt sind.
+  Insbesondere muss klar gekennzeichnet sein, welche ohne Authentifizierung
+  erfolgen. Dies kann der Fall sein, wenn für Performancezwecke die
+  Authentifizierung deaktiviert wird. Ebenfalls muss genau dargelegt werden,
+  welche Schutzmaßnahmen für die einzelnen Schnittstellen implementiert wurden
+  und wie diese die gängigsten Angriffe abwehren.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 11)</sup></h3>
+<p>Bei internetzugänglichen Schnittstellen ist die Gefahr eines Angriffs sehr
+  hoch, da diese von überall angegriffen werden können. Der Cloud-Anbieter
+  sollte jede Schnittstelle seines Dienstes so gestalten, dass sie robust gegen
+  Angriffe ist und kontinuierlich getestet wird, um die Sicherheit zu
+  gewährleisten. Insbesondere sollte erkennbar sein, welche Dienste dem Internet
+  ausgesetzt sind und welche davon keinen Schutz gegen gängige Angriffe wie
+  DoS-Angriffe, Passwort-Spraying und Anwendungsebene-Angriffe haben.</p>
+<h2>Prinzip 12: Sichere Dienstverwaltung</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 12)</sup></h3>
+<p>Prinzip 12 stellt die Anforderung an Cloud-Anbieter, ihre
+  Verwaltungsschnittstellen nach Unternehmenspraktiken zu entwerfen, zu
+  implementieren und zu verwalten. Die Notwendigkeit besteht darin, dass
+  Verwaltungssysteme meist hoch privilegierten Zugriff auf den Cloud-Service
+  besitzen und somit attraktiv für Angreifer sind. Eine Kompromittierung dieser
+  Systeme kann massive Auswirkungen nach sich ziehen, wie Diebstahl oder
+  Manipulation großer Datenmengen.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 12)</sup></h3>
+<p>Entscheidungsträger sollten darauf vertrauen können, dass der Cloud-Anbieter
+  robuste Maßnahmen zur Sicherung der Verwaltungssysteme implementiert. Dies
+  umfasst das Vertrauen in die Geräte, die benutzt werden, um den Cloud-Service
+  zu verwalten. Hierbei sollte der Cloud-Anbieter in kurzen Intervallen
+  Sicherheitskontrollen der verwendeten Geräte durchführen. Der Anbieter sollte
+  seine Verwaltungsschnittstellen schützen und ein gestaffeltes Risikomanagement
+  implementieren. Es sollten Strategien des Privileged Access Managements wie
+  „Just-in-Time“ und „Just-Enough“ Administration verwendet werden.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 12)</sup></h3>
+<p>Unter anderem ist es wichtig, dass Verwaltungsschnittstellen detaillierte
+  Auditinformationen liefern. Diese dienen zur Erkennung von anomalem Verhalten
+  und liefern wichtige Anhaltspunkte, die für die Sicherheit essentiell sind. Um
+  zu verhindern, dass Verwaltungsschnittstellen kompromittiert werden und sich
+  Angreifer lateral bewegen können, müssen diverse Implementierungen vorliegen.
+  Privilegierte Zugriffe dürfen nur über interne APIs erfolgen, die
+  Auditinformationen produzieren. Bei hoch privilegierten Zugriffen, die meist
+  sensible Kundendaten betreffen, sollte die Authentifizierung über mehrere
+  Instanzen erfolgen und gegebenenfalls zusätzlich durch MFA gesichert werden.
+  Bei der höchsten Privilegierungsstufe darf nur von sogenannten privilegierten
+  Arbeitsstationen (PAWs) auf die Verwaltungsschnittstellen zugegriffen werden.
+  Diese Stationen sollten sich in den Unternehmensgebäuden befinden und der
+  Zugriff sollte eingeschränkt werden, wie in Prinzip 2 beschrieben. Diese
+  Implementierungsansätze erschweren sowohl den unbeabsichtigten Missbrauch als
+  auch gezielte Angriffe.</p>
+<h2>Prinzip 13: Auditinformationen und Sicherheitswarnungen</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 13)</sup></h3>
+<p>Das dreizehnte Prinzip der NCSC-Richtlinien betont die Wichtigkeit und
+  Nützlichkeit, den Benutzern notwendige Protokolle zur Verfügung zu stellen, um
+  den Zugriff auf den Dienst und Kundendaten zu überwachen und nachvollziehen zu
+  können. Diese sind relevant, um Sicherheitsvorfälle schnell zu identifizieren
+  und angemessen darauf zu reagieren.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 13)</sup></h3>
+<p>Ziel ist es, den Nutzern die benötigten Informationen bereitzustellen, um den
+  Zusammenhang von Vorfällen mit der Nutzung und den gespeicherten Daten
+  nachzuvollziehen. Dabei spielt die Qualität der Informationen eine große
+  Rolle, um genau zu analysieren, welche bösartigen Aktivitäten genau passiert
+  sind. Wichtig ist ebenso, dass der Cloud-Anbieter jegliche Informationen über
+  die Aufbewahrungsfrist beilegt. Entscheidungsträger müssen selbst entscheiden,
+  ob die bereitgestellten Informationen für ihre intern gesetzten Anforderungen
+  genügen, um Missbrauch oder Vorfälle untersuchen zu können. Zusätzlich sollte
+  der Cloud-Anbieter Auditinformationen betreffend seines Personals
+  bereitstellen, die für den Kundendienst zuständig sind.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 13)</sup></h3>
+<p>Ebenfalls wichtig ist, dass Auditinformationen während eines definierten
+  Aufbewahrungszeitraums weder von Kunden noch vom Cloud-Anbieter gelöscht
+  werden dürfen. Auditinformationen sollten standardmäßig aktiviert und
+  verfügbar sein. Wenn dies nicht der Fall ist, muss der ausgewählte
+  Cloud-Anbieter Optionen bieten, die das Aktivieren leicht ermöglichen.
+  Entscheidungsträger müssen dem Cloud-Anbieter das gewünschte Format der
+  Auditinformationen mitteilen. Dabei können meistens zwei Formate
+  bereitgestellt werden: maschineller Form oder textuelle Form. Der
+  Detaillierungsgrad der Informationen muss dementsprechend hoch sein, um eine
+  effektive forensische Untersuchung von Vorfällen zu gewährleisten.</p>
+<p>Der zweite wichtige Punkt dieses Prinzips betrifft Sicherheitswarnungen.
+  Diese sollten vom Anbieter standardmäßig aktiviert sein, um im Falle eines
+  Zugriffs auf den Kundenservice und Kundendaten eine Warnung an den betroffenen
+  Kunden zu übermitteln. Der Warnungsprozess sollte schnell und automatisch
+  vonstattengehen und in einem für den Kunden passenden Format übermittelt
+  werden. Bei der Auswahl eines Anbieters sollte darauf geachtet werden, wie
+  dieser Prozess umgesetzt wurde und in welchem Umfang der Kunde miteinbezogen
+  wird. Anbieter sollten den Kunden von Anfang an schnellstmöglich darüber
+  informieren, wenn eine Misskonfiguration, die die Sicherheit betrifft, erkannt
+  wurde. Ebenfalls muss der Anbieter Benutzer warnen, wenn dieser Anomalien
+  entdeckt. Zu diesen Anomalien gehören unerwartete Verfügbarkeit des Dienstes
+  oder eine große Datenübertragung.</p>
+<h2>Prinzip 14: Sichere Nutzung des Dienstes</h2>
+<hr>
+<h3>Definition und Bedeutung <sup>(Prinzip 14)</sup></h3>
+<p>Das vierzehnte Prinzip der NCSC-Richtlinien hebt die Bedeutung hervor, dass
+  Cloud-Anbieter ihre Kunden unterstützen sollten, ihre Daten sicher zu
+  verwalten. Ein entscheidender Punkt dabei ist, dass die Dienste von Anfang an
+  sicher gestaltet und standardmäßig gegen häufige Bedrohungen geschützt sind.
+  Cloud-Anbieter sollten sicherstellen, dass ihre Dienste so konzipiert sind,
+  dass sie von Beginn an sicher sind.</p>
+<h3>Ziele und Erwartungen <sup>(Prinzip 14)</sup></h3>
+<p>Dies bedeutet, dass die Standardeinstellungen der Dienste bereits viele
+  Sicherheitsanforderungen erfüllen. Kunden sollten wissen, welche
+  Sicherheitsziele durch die Standardkonfiguration erreicht werden und welche
+  zusätzlichen Anpassungen notwendig sind, um alle Sicherheitsanforderungen zu
+  erfüllen. Standardmäßig sollten Daten und Dienste nicht für nicht
+  authentifizierte Benutzer zugänglich sein. Der Anbieter sollte kontinuierlich
+  daran arbeiten, die Standardeinstellungen zu verbessern, um neuen Bedrohungen
+  zu begegnen. Sicherheitsfunktionen sollten standardmäßig aktiviert sein. Zudem
+  sollte der Anbieter Mechanismen zum Schutz vor häufigen netzwerkbasierten
+  Angriffen wie DDoS bieten.</p>
+<h3>Implementierungsansätze <sup>(Prinzip 14)</sup></h3>
+<p>Zusätzlich zur Bereitstellung sicherer Dienste sollten Cloud-Anbieter ihre
+  Kunden unterstützen, ihre Sicherheitsverantwortungen wahrzunehmen. Dies
+  umfasst die Bereitstellung von Tools und Schnittstellen, die es Kunden
+  ermöglichen, ihre Dienste sicher und einfach zu konfigurieren. Kunden sollten
+  die Möglichkeit haben, alle bereitgestellten Ressourcen und deren
+  Konfiguration zentral zu überwachen und zu verwalten. Der Anbieter sollte
+  Warnungen ausgeben, wenn die Konfiguration eines Kunden potenziell unsicher
+  ist, und Werkzeuge zur Verfügung stellen, die bei der Behebung von
+  Sicherheitslücken helfen.</p>
+<p>Cloud-Anbieter sollten auch Mechanismen bereitstellen, um veraltete
+  Abhängigkeiten und fehlende Sicherheitsupdates in den Workloads der Kunden zu
+  überwachen und entsprechende Sicherheitswarnungen auszugeben oder Probleme
+  automatisch zu beheben. Dashboards und vordefinierte Warnungen können helfen,
+  gute und schlechte Sicherheitspraktiken zu identifizieren und Prioritäten für
+  Sicherheitsverbesserungen zu setzen. Letztlich sind Kunden immer für bestimmte
+  Aspekte der Sicherheit ihrer Daten verantwortlich. Die genaue
+  Verantwortlichkeit hängt von dem genutzten Dienst und dessen Konfiguration ab.
+  Es ist wichtig, diese Verantwortlichkeiten zu identifizieren und regelmäßig zu
+  überprüfen, ob die aktuellen Sicherheitsmaßnahmen den Anforderungen
+  entsprechen. Dies sollte während des gesamten Bereitstellungszyklus des
+  Services erfolgen.</p>
