@@ -39,9 +39,10 @@ To set up Moodle using Docker, please follow these steps:
 
 ### Creation
 
-1. Create a Wiki activity in Moodle.
-2. In the **Wiki name** field, enter: Cloud Security Wiki.
-3. In the **Description** field, enter the following HTML code:
+1. Click on the "Edit mode" button in the upper right corner
+2. Create a Wiki activity on the homepage
+3. In the **Wiki name** field, enter: Cloud Security Wiki.
+4. In the **Description** field, enter the following HTML code (Note: Change the text field to "Source Code" in the Tools Label):
 
     ```html
     <p>Dieses Wiki dient als umfassende Ressource für alle <strong>Themen rund um
@@ -55,6 +56,7 @@ To set up Moodle using Docker, please follow these steps:
     <p>Im <strong>unteren Bereich finden Sie die Links</strong>, um zu den
     verschiedenen Themenbereichen zu gelangen!</p>
     ```
+5. In the **First page name" field, enter: Hauptseite
 
 ### Main Page
 
