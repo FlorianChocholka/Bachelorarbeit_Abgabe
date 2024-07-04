@@ -23,7 +23,7 @@ To run the application locally, follow these steps:
     ```
 2. **Navigate to the project directory:**
     ```bash
-    cd Bachelorarbeit-main
+    cd ReactApp
     ```
 3. **Install the dependencies:**
     ```bash
