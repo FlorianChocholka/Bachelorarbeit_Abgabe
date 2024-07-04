@@ -12,4 +12,4 @@ Im Ordner `Theorie-Teil` finden Sie:
 Im Ordner `ReactApp` finden Sie ein **README**, das Anweisungen zur lokalen Installation und zum Starten des interaktiven Fallbeispiel-Tools für die 14 NCSC-Sicherheitsprinzipien enthält.
 
 ### Cloud Security Wiki
-Im Ordner `Cloud Security Wiki` finden Sie ebenfalls ein **README**, das Anweisungen zur lokalen Einrichtung des Cloud Security Tools in Moodle enthält.
+Im Ordner `Cloud-Security-Wiki` finden Sie ebenfalls ein **README**, das Anweisungen zur lokalen Einrichtung des Cloud Security Tools in Moodle enthält.
