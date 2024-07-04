@@ -60,13 +60,13 @@ To set up Moodle using Docker, please follow these steps:
 
 On the main page, please add the following links:
 
-    ```html
+    
     <p>[[Einführung in die Cloud Modelle]]</p>
     <p>[[Deployment-Modelle in der Cloud]]</p>
     <p>[[Service Level Agreements]]</p>
     <p>[[Auswahl und Überprüfung von Cloud-Anbietern nach NCSC-Richtlinien]]</p>
     <p>[[Sichere Nutzung von SaaS-Anwendungen]]</p>
-    ```
+    
 
 ## Notes on Creating Pages in the Wiki
 
