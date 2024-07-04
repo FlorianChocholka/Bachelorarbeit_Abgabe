@@ -39,10 +39,10 @@ To set up Moodle using Docker, please follow these steps:
 
 ### Creation
 
-1. Click on the "Edit mode" button in the upper right corner
+1. Click on the **"Edit mode"** button in the upper right corner
 2. Create a Wiki activity on the homepage
 3. In the **Wiki name** field, enter: Cloud Security Wiki.
-4. In the **Description** field, enter the following HTML code (Note: Change the text field to "Source Code" in the Tools Label):
+4. In the **Description** field, enter the following HTML code (**Note:** Change the text field to "Source Code" in the Tools Label):
 
     ```html
     <p>Dieses Wiki dient als umfassende Ressource für alle <strong>Themen rund um
@@ -56,13 +56,12 @@ To set up Moodle using Docker, please follow these steps:
     <p>Im <strong>unteren Bereich finden Sie die Links</strong>, um zu den
     verschiedenen Themenbereichen zu gelangen!</p>
     ```
-5. In the **First page name" field, enter: Hauptseite
+5. In the **"First page name"** field, enter: Hauptseite
 
 ### Main Page
 
-On the main page, please add the following links (Note: Change the text field to "Source Code" in the Tools Label):
+On the main page, please add the following links (**Note:** Change the text field to "Source Code" in the Tools Label):
 
-    
     <p>[[Einführung in die Cloud Modelle]]</p>
     <p>[[Deployment-Modelle in der Cloud]]</p>
     <p>[[Service Level Agreements]]</p>
@@ -72,7 +71,7 @@ On the main page, please add the following links (Note: Change the text field to
 
 ## Notes on Creating Pages in the Wiki
 
-- Once the links on the main page are created, they will appear in red.
-- Click on them once to create the corresponding pages.
-- The codes for the individual HTML pages can be found in this folder.
-- Insert the HTML contents in the text field. First, you need to switch to "Source Code" in the Tools.
+- Once the links on the main page are created, they will appear in **red**.
+- **Click on them** once to create the corresponding pages.
+- The codes for the **individual HTML pages** can be found in this folder.
+- **Insert the HTML contents** in the text field. First, you need to **switch to "Source Code" in the Tools**.
