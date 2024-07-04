@@ -33,7 +33,11 @@ To run the application locally, follow these steps:
     ```bash
     npm start
     ```
-
+5. **Use the Application**
+   ```
+   http://localhost:3000
+   ```
+   
 ## Project Structure
 
 The project is structured into several key components:
